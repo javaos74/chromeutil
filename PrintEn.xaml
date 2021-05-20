@@ -6,8 +6,8 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap2010:Annotation.AnnotationText>UPTF000000C4eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoi7YGs66Gs7J20IO2VnOq4gOuhnCDstpzroKXrkJjripQg6rK97JqwIOyCrOyaqSIsIjxWZXJzaW9uPmtfX0JhY2tpbmdGaWVsZCI6MX0=</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>881,2419</sap:VirtualizedContainerService.HintSize>
+  <sap2010:Annotation.AnnotationText>UPTF000000C4eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiQ2hyb21l7J20IOyYgeyWtOuhnCDstpzroKXrkJjripQg6rK97JqwIOyCrOyaqSAiLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
+  <sap:VirtualizedContainerService.HintSize>881,2213</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Print_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -79,19 +79,19 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="크롬이 한글로 출력되는 경우 사용" DisplayName="Print" sap:VirtualizedContainerService.HintSize="602,2254" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Chrome이 영어로 출력되는 경우 사용 " DisplayName="Print" sap:VirtualizedContainerService.HintSize="602,2048" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Apple iPhone 11 | Bouygues Telecom - Chrome" sap:VirtualizedContainerService.HintSize="560,2162" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="WindowMessages" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Apple iPhone 11 | Bouygues Telecom - Chrome" sap:VirtualizedContainerService.HintSize="560,1956" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="WindowMessages" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="526,1870" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="526,1664" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="file_exists" />
             </Sequence.Variables>
@@ -100,34 +100,29 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="484,150" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]p[u(ctrl)][u(hk)]" />
-            <If Condition="[Not string.IsNullOrEmpty(in_pages)]" sap:VirtualizedContainerService.HintSize="484,916" sap2010:WorkflowViewState.IdRef="If_1">
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="484,150" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]p[u(ctrl)][u(hk)]" />
+            <If Condition="[Not string.IsNullOrEmpty( in_pages)]" sap:VirtualizedContainerService.HintSize="484,710" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,735" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence sap:VirtualizedContainerService.HintSize="376,529" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ClickType="Single" DisplayName="Click '전체'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="1990, 405, 384, 64" ElementType="DropDown" FriendlyName="'전체'" FullSelectorArgument="&lt;ctrl name='NAVER' role='document' /&gt;&lt;ctrl name='페이지' role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl name='NAVER' role='document' /&gt;&lt;ctrl name='페이지' role='combo box' automationid='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAYQAAABECAYAAACBIkLTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAN9SURBVHhe7dpLbuNGFAXQLCS2vm3Z7u6VNNBAtpFJBtlNRhllbUGArIHtVwADpliSSrJIS6UzOAOS7xU5uhf+/PTy+rUDAIUAQHKwEJ52r91qve0Wy3X38Ljsfn5YAHCDIsMjyyPTI9tLmV8shOeXL91686l4KAC3LzI+sn6Y/aNCiOZ4XKyKBwDQjsj64U8Lo0JYrrbFRQDas3rL/D7//1cIu+fPxQUA2vTwJrJ/VAib7VNxAYB2RfaPCmG52hSHAWhXZP+oEPxrKcD9iewfFUJpEID2KQQAEoUAQKIQAEgUAgCJQgAgUQgAJAoBgEQhAJAoBAAShQBAcvWF8Pc//yalZ++Vnz3luwCu3aSF0AfsKfadkd8/pHYnn6vdA2iRQhjM1e4BtGjSQig5NXTPCenanXyudg+gRU0UQj9To7S37xrgniiEwb3SDMC9mLUQ+sAtBW/+LDecPaZ2J5+r3QNokUIYzNXuAbRotkLow7YP3NrwrZ0bOvfs2j2AS/j2/Zfujz//uohff/u9+I5TzFIIfdCWwnd4r6RmJlfa6e+VHNoDmNIlSuESZRAmL4RS8NY86x17XlI6d3gvl8/01wBzeE8pXKoMwqSFUArd3LGZY/u54XnH9vKZmh2AKZxTCpcsgzBZIfThWhOwh2Zrz+gN54/t5s+PzQNM6ZRSuHQZhMkKIZwSrvtmTwnpfrafz69z+bNDswBzqCmFKcogTFoIl3BKSJdm+3ulM/L7++YA5nSoFKYqgzBrIZwTuLU7/Vxpdt+z/F5pBuAjlEphyjIITRRCP3NorjRz7BrgIw1LYeoyCDdfCP3zmnPzmXyv9hyAuUQpzFEG4eoLoca5Z+bfM9X3AdyCJgrhXPn3XNv3AcxJIQy+59q+D2BOCmHwPdf2fQBz+pBCOFfpzPfIz53qPQC34K4LITfXewCu0ayFAMD1UggAJAoBgEQhAJAoBAAShQBAohAASBQCAIlCACBRCAAkCgGARCEAkCgEAJJRITw8LouDALQrsn9UCMvlpjgMQLsi+0eFsN58Kg4D0K7I/lEh7J4/F4cBaFP8uiiyf1QIYbN9Ki4B0J7Ndvdf/o8K4fnlS7dYrIuLALQjsj4yv8//USGEGPD3BIB2RcYPyyAUC6H3tHvtVuttt1iu/UsqwA2LDI8sj0yPbC9l/sFCAOB+KAQA3nztfgDQ9xWIizR9wgAAAABJRU5ErkJggg==" InformativeScreenshot="b1ad90533e0f2dd05bc3a8623f39ed0f.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='NAVER - Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" SelectionStrategy="AA" />
-                    </uix:NClick.Target>
-                  </uix:NClick>
-                  <uix:NSelectItem DisplayName="Select Item '전체'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="맞춤설정">
+                  <uix:NSelectItem DisplayName="Select Item 'All'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Custom">
                     <uix:NSelectItem.Items>
                       <scg:List x:TypeArguments="x:String" Capacity="2">
-                        <x:String>전체</x:String>
-                        <x:String>맞춤설정</x:String>
+                        <x:String>All</x:String>
+                        <x:String>Custom</x:String>
                       </scg:List>
                     </uix:NSelectItem.Items>
                     <uix:NSelectItem.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="1990, 405, 384, 64" ElementType="DropDown" FriendlyName="'전체'" FullSelectorArgument="&lt;ctrl name='NAVER' role='document' /&gt;&lt;ctrl name='페이지' role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl name='NAVER' role='document' /&gt;&lt;ctrl name='페이지' role='combo box' automationid='' /&gt;" InformativeScreenshot="277a271477c618a787bc0f86ccd9e48e.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='NAVER - Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" />
+                      <uix:TargetAnchorable DesignTimeRectangle="1990, 405, 384, 64" ElementType="DropDown" FriendlyName="'All'" FullSelectorArgument="&lt;ctrl name='Google Doodles' role='document' /&gt;&lt;ctrl name='Pages' role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Google Doodles' role='document' /&gt;&lt;ctrl name='Pages' role='combo box' automationid='' /&gt;" InformativeScreenshot="1c5aa940b77658a91fdef22facaab925.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Google Doodles - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" />
                     </uix:NSelectItem.Target>
                   </uix:NSelectItem>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" Text="[in_pages]">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" Text="[in_pages]">
                     <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="1990, 481, 384, 64" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;ctrl name='Google Doodles' role='document' /&gt;&lt;ctrl name='e.g. 1-5, 8, 11-13' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Google Doodles' role='document' /&gt;&lt;ctrl name='e.g. 1-5, 8, 11-13' role='editable text' automationid='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAYQAAABECAYAAACBIkLTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAUnSURBVHhe7dq/imRFFMdxX2S6e3pwZt3ZYUEMjX0CAxUDzQxd1EAzM9lMEBc0ERQxFXwEEyMfwycQzK5TBWeprXvq362qvl13vsEHdrvO+VXNQNVhZve1Nx7fTQAAMBAAAFZ0IFzfPJ6Ox9enw+Fq2u0up4uLPQBgQOYNN2+5edPN2669+cGBcLy6ni52BzUYADCw+7fdvPH+uz8bCDePbqf9/qiHAAA2Y3842jdf3v/ZQLA/GSiNAIDtcX9SeGUgmN8r8WsiAHhA7t98+SnhlYFg/rFBbQAAbJZ5+2cDwfw+SSsGAGyX+d9Hs4HAr4sA4OHZ7S+VgaAUAgC2j4EAALAYCAAAi4EAALAYCAAAi4EAALAYCAAAi4EAALAYCAAAi4EAALAYCAAAi4EAALAYCAAAi4EAALAYCAAAi4FQ6IeffrW0tVKSFaP1LdEzW1OzR6/zleZKvU+rBbaAgZChx6OgZWq03hJapkvrWaomv6Y3Zmmu1ufSeoDRMRAitIdAaPUlWuXExM4bWyvlZvm0epfWI7T6XFqe0OpdsdrYGjA6BkKEdvFbPQatcmJkj9A+qfVcWkZubk1vTE1uqi43BxjNSQaCXCCXVlcilOf/vbVW+b3PaaT2kPUe56jJXfNMUhOry6kBRtR1ILgXR6P1pGg5Gq23hVb5vc9ppPaQ9R7nqMk9xzO5JKfHGYE1nWwg5Hye4vb5vbG1llrluznyZ5dfv0Qqr+VevprsXudqldvrfMDaug0EuTShi7PkUuVmhtZbaJXvnjVE6ysVymq9j68mu9e5WuRKRo/zAWvrPhC0NWPJxcqpL80s1So/liNrLfYx3DyfVt9CTX6vsy3JlR6fVguMrstAyL04JZerR+YSqXxZ12j1IUt6NO7+Gq2nhZr8VK+sa7R6kVPjc7NdWi0wuu4DIYeW4cutL8lcIpUv6xqtPmRJjy+2d2ythZrsVK+sa7R6kVOTkrsXMCIGQqHe+UL2qdkr1d9ij5Ca3HM8k0tyepwRWFP3gaCtL5WT2WNfV+98Ifss3Su3v2aPmJrcczyTr9cZgTV1GQhGjwuTk9ljX1eL/JyM2n2kv/c+ITW5a55JanLrtDVgVKsOhNILJZmhvtR6Cy3yc87Zch9tzZD12n00NblrnklqYnU5NcCIug+E0MUJrYXq3TWtJrbmrvufl2qdo2XlrPmfa3JyUuv+57lq+mv3DsnNlTqtNrYGjK7bQDDcyxMS6/HX/PWYWJ+/VqJFhnDPpIn1aGsaNy8k1qet5ajpr907pCRXakO0HmB0XQeCKLlQqXXhZrn1/t9Tn5cK5S8leS6tTuTU+Nxsl1Yrcmpiavpr9w4pzZV6n1YLbMFJBsIpbfnSnupROtU+AM7LUAMh9UBt/SE71de25e8hgLDhBkLosYqtbcGpvrYtfw8BxA01EAx5sEK0HgBA2nADQTAMAKCtYQcCAKAtBgIAwGIgAAAsBgIAwGIgAAAsBgIAwGIgAAAsBgIAwGIgAAAsBgIAwJoNhN3+Ui0EAGyXeftnA+FweaUWAwC2y7z9s4FwvLpWiwEA22Xe/tlAuHl0O13sDmoDAGCD7t988/bPBoLx7ifPp+d//AcAeAA+/PzHl+//bCDcPnk6ffHib7URALAdn33313R792Z4IBhPnr41vf/p99M3v/+rhgAAxmXe9g+evbBvvfv2qwNBvP3Oe9NHX/48Pfv2z+nr3/5RgwEA58+84eYt//irX+zbrr350YEAAHg4GAgAgHt30/9YXgJbGHXq1wAAAABJRU5ErkJggg==" InformativeScreenshot="aba32fe995782b6440a5e00638eb4ac9.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Google Doodles - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" SelectionStrategy="AA" />
+                      <uix:TargetAnchorable DesignTimeRectangle="1990, 481, 384, 64" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;ctrl name='Google Doodles' role='document' /&gt;&lt;ctrl name='e.g. 1-5, 8, 11-13' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Google Doodles' role='document' /&gt;&lt;ctrl name='e.g. 1-5, 8, 11-13' role='editable text' automationid='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAYQAAABECAYAAACBIkLTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAUnSURBVHhe7dq/imRFFMdxX2S6e3pwZt3ZYUEMjX0CAxUDzQxd1EAzM9lMEBc0ERQxFXwEEyMfwycQzK5TBWeprXvq362qvl13vsEHdrvO+VXNQNVhZve1Nx7fTQAAMBAAAFZ0IFzfPJ6Ox9enw+Fq2u0up4uLPQBgQOYNN2+5edPN2669+cGBcLy6ni52BzUYADCw+7fdvPH+uz8bCDePbqf9/qiHAAA2Y3842jdf3v/ZQLA/GSiNAIDtcX9SeGUgmN8r8WsiAHhA7t98+SnhlYFg/rFBbQAAbJZ5+2cDwfw+SSsGAGyX+d9Hs4HAr4sA4OHZ7S+VgaAUAgC2j4EAALAYCAAAi4EAALAYCAAAi4EAALAYCAAAi4EAALAYCAAAi4EAALAYCAAAi4EAALAYCAAAi4EAALAYCAAAi4FQ6IeffrW0tVKSFaP1LdEzW1OzR6/zleZKvU+rBbaAgZChx6OgZWq03hJapkvrWaomv6Y3Zmmu1ufSeoDRMRAitIdAaPUlWuXExM4bWyvlZvm0epfWI7T6XFqe0OpdsdrYGjA6BkKEdvFbPQatcmJkj9A+qfVcWkZubk1vTE1uqi43BxjNSQaCXCCXVlcilOf/vbVW+b3PaaT2kPUe56jJXfNMUhOry6kBRtR1ILgXR6P1pGg5Gq23hVb5vc9ppPaQ9R7nqMk9xzO5JKfHGYE1nWwg5Hye4vb5vbG1llrluznyZ5dfv0Qqr+VevprsXudqldvrfMDaug0EuTShi7PkUuVmhtZbaJXvnjVE6ysVymq9j68mu9e5WuRKRo/zAWvrPhC0NWPJxcqpL80s1So/liNrLfYx3DyfVt9CTX6vsy3JlR6fVguMrstAyL04JZerR+YSqXxZ12j1IUt6NO7+Gq2nhZr8VK+sa7R6kVPjc7NdWi0wuu4DIYeW4cutL8lcIpUv6xqtPmRJjy+2d2ythZrsVK+sa7R6kVOTkrsXMCIGQqHe+UL2qdkr1d9ij5Ca3HM8k0tyepwRWFP3gaCtL5WT2WNfV+98Ifss3Su3v2aPmJrcczyTr9cZgTV1GQhGjwuTk9ljX1eL/JyM2n2kv/c+ITW5a55JanLrtDVgVKsOhNILJZmhvtR6Cy3yc87Zch9tzZD12n00NblrnklqYnU5NcCIug+E0MUJrYXq3TWtJrbmrvufl2qdo2XlrPmfa3JyUuv+57lq+mv3DsnNlTqtNrYGjK7bQDDcyxMS6/HX/PWYWJ+/VqJFhnDPpIn1aGsaNy8k1qet5ajpr907pCRXakO0HmB0XQeCKLlQqXXhZrn1/t9Tn5cK5S8leS6tTuTU+Nxsl1Yrcmpiavpr9w4pzZV6n1YLbMFJBsIpbfnSnupROtU+AM7LUAMh9UBt/SE71de25e8hgLDhBkLosYqtbcGpvrYtfw8BxA01EAx5sEK0HgBA2nADQTAMAKCtYQcCAKAtBgIAwGIgAAAsBgIAwGIgAAAsBgIAwGIgAAAsBgIAwGIgAAAsBgIAwJoNhN3+Ui0EAGyXeftnA+FweaUWAwC2y7z9s4FwvLpWiwEA22Xe/tlAuHl0O13sDmoDAGCD7t988/bPBoLx7ifPp+d//AcAeAA+/PzHl+//bCDcPnk6ffHib7URALAdn33313R792Z4IBhPnr41vf/p99M3v/+rhgAAxmXe9g+evbBvvfv2qwNBvP3Oe9NHX/48Pfv2z+nr3/5RgwEA58+84eYt//irX+zbrr350YEAAHg4GAgAgHt30/9YXgJbGHXq1wAAAABJRU5ErkJggg==" InformativeScreenshot="8e7224bdbb34a3f8d8030a2c4490c8e5.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Google Doodles - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" SelectionStrategy="AA" />
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
                 </Sequence>
