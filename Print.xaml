@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Print" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Print" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="저장될 PDF 전체 경로 " Name="in_saved_pdf_path" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="일부 페이지만 출력할 경우 페이지 정보 (예 1, 1-5)" Name="in_pages" Type="InArgument(x:String)" />
@@ -7,10 +7,10 @@
     <x:Null />
   </mva:VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF000000C4eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoi7YGs66Gs7J20IO2VnOq4gOuhnCDstpzroKXrkJjripQg6rK97JqwIOyCrOyaqSIsIjxWZXJzaW9uPmtfX0JhY2tpbmdGaWVsZCI6MX0=</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>832,2420</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>620,2000</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Print_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="30">
+    <scg:List x:TypeArguments="x:String" Capacity="64">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -41,10 +41,13 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.Security</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="46">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -78,29 +81,36 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="크롬이 한글로 출력되는 경우 사용" DisplayName="Print" sap:VirtualizedContainerService.HintSize="602,2255" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="크롬이 한글로 출력되는 경우 사용" DisplayName="Print" sap:VirtualizedContainerService.HintSize="552,1835" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Apple iPhone 11 | Bouygues Telecom - Chrome" sap:VirtualizedContainerService.HintSize="560,2163" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="WindowMessages" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Apple iPhone 11 | Bouygues Telecom - Chrome" sap:VirtualizedContainerService.HintSize="510,1743" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="WindowMessages" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="526,1871" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="476,1451" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="file_exists" />
+              <Variable x:TypeArguments="ui:UiElement" Name="print_btn" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="484,150" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]p[u(ctrl)][u(hk)]" />
-            <If Condition="[Not string.IsNullOrEmpty(in_pages)]" sap:VirtualizedContainerService.HintSize="484,917" sap2010:WorkflowViewState.IdRef="If_1">
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="434,150" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]p[u(ctrl)][u(hk)]" />
+            <If Condition="[Not string.IsNullOrEmpty(in_pages)]" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="376,736" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
@@ -132,9 +142,106 @@
                 </Sequence>
               </If.Then>
             </If>
-            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="484,150" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(enter)][u(hk)]" />
-            <ui:Delete ContinueOnError="True" sap:VirtualizedContainerService.HintSize="484,80" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[in_saved_pdf_path]" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into '파일 이름'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="484,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="WindowMessages" Text="[in_saved_pdf_path + &quot;[k(enter)]&quot;]">
+            <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+              <TextExpression.Namespaces>
+                <sco:Collection x:TypeArguments="x:String">
+                  <x:String>System.Activities</x:String>
+                  <x:String>System.Activities.Statements</x:String>
+                  <x:String>System.Activities.Expressions</x:String>
+                  <x:String>System.Activities.Validation</x:String>
+                  <x:String>System.Activities.XamlIntegration</x:String>
+                  <x:String>Microsoft.VisualBasic.Activities</x:String>
+                  <x:String>System</x:String>
+                  <x:String>System.Collections.Generic</x:String>
+                  <x:String>System.Data</x:String>
+                  <x:String>System.Diagnostics</x:String>
+                  <x:String>System.IO</x:String>
+                  <x:String>System.Linq</x:String>
+                  <x:String>System.Management.Automation</x:String>
+                  <x:String>System.Net.Mail</x:String>
+                  <x:String>System.Xml</x:String>
+                  <x:String>System.Xml.Linq</x:String>
+                  <x:String>UiPath.Library</x:String>
+                  <x:String>System.Windows.Markup</x:String>
+                </sco:Collection>
+              </TextExpression.Namespaces>
+              <TextExpression.References>
+                <sco:Collection x:TypeArguments="AssemblyReference">
+                  <AssemblyReference>System.Activities</AssemblyReference>
+                  <AssemblyReference>mscorlib</AssemblyReference>
+                  <AssemblyReference>System.Data</AssemblyReference>
+                  <AssemblyReference>System</AssemblyReference>
+                  <AssemblyReference>System.Core</AssemblyReference>
+                  <AssemblyReference>System.Management.Automation</AssemblyReference>
+                  <AssemblyReference>System.Xml</AssemblyReference>
+                  <AssemblyReference>System.Xml.Linq</AssemblyReference>
+                  <AssemblyReference>UiPath.Library</AssemblyReference>
+                  <AssemblyReference>PresentationFramework</AssemblyReference>
+                  <AssemblyReference>WindowsBase</AssemblyReference>
+                  <AssemblyReference>PresentationCore</AssemblyReference>
+                  <AssemblyReference>System.Xaml</AssemblyReference>
+                </sco:Collection>
+              </TextExpression.References>
+              <sap2010:WorkflowViewState.ViewStateManager>
+                <sap2010:ViewStateManager>
+                  <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+                </sap2010:ViewStateManager>
+              </sap2010:WorkflowViewState.ViewStateManager>
+            </Delay>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,593" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <TryCatch.Try>
+                <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,150" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(enter)][u(hk)]" />
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,427" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,357" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="setup">
+                          <Variable.Default>
+                            <Literal x:TypeArguments="x:String">설정</Literal>
+                          </Variable.Default>
+                        </Variable>
+                        <Variable x:TypeArguments="x:String" Name="save">
+                          <Variable.Default>
+                            <Literal x:TypeArguments="x:String">저장</Literal>
+                          </Variable.Default>
+                        </Variable>
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'Chrome_RenderWidgetHost...'" FoundElement="[print_btn]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                        <ui:WaitUiElementAppear.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4331555f-32d3-4042-a4c8-0ec3824ef7c7" InformativeScreenshot="b0190f034b70f03eae303a6bcc4ab94a" Selector="[String.Format(&quot;&lt;wnd cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;&lt;ctrl name='{0}' role='document' /&gt;&lt;ctrl name='{1}' role='push button' /&gt;&quot;, setup, save)]">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:WaitUiElementAppear.Target>
+                      </ui:WaitUiElementAppear>
+                      <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,117" sap2010:WorkflowViewState.IdRef="NClick_6" InUiElement="[print_btn]" KeyModifiers="None" MouseButton="Left" />
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <ui:Delete ContinueOnError="True" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[in_saved_pdf_path]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into '파일 이름'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="WindowMessages" Text="[in_saved_pdf_path + &quot;[k(enter)]&quot;]">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="266, 1534, 1874, 34" ElementType="InputBox" FriendlyName="'iPhone SE'" FullSelectorArgument="&lt;wnd aaname='탐색 창' cls='DirectUIHWND' /&gt;&lt;wnd aaname='파일 이름:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='탐색 창' cls='DirectUIHWND' /&gt;&lt;wnd aaname='파일 이름:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" ImageBase64="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" InformativeScreenshot="0dab4a24ce1962b5bbb6a0804190f7de.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='다른 이름으로 저장' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
@@ -145,7 +252,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="376,259" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
